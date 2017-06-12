@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="${item.name}"> title </title>
+    </head>
+    <body>
+        <header>
+            <h1 th:text="${item.name}"> header </h1>
+        </header>
+        
+        <article>
+            <h3 th:text="${item.type}"> blah-blah </h3>
+            
+            <a th:href="@{/}">Back to listing</a>
+        </article>
+    </body>
+</html>

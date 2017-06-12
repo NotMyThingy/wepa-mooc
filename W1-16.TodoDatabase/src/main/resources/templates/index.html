@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TodoDatabase</title>
+    </head>
+
+    <body>
+        <h1>TodoDatabase</h1>
+
+        <table>
+            <tr>
+                <th>Task name</th>
+                <th></th>
+            </tr>
+
+            <tr th:each="item : ${items}">
+                <td><a th:href="@{/{item}(item=${item.id})}" th:text="${item.name}">Item name</a></td>
+                <td><form th:action="@{/{item}(item=${item.id})}" th:method="DELETE"><input type="submit" value="Done!"/></form></td>
+            </tr>
+        </table>
+
+
+        <h2>Add a task</h2>
+
+        <form action="/" method="POST">
+            <span>Name:</span>
+            <input type="text" name="name"/>
+            <input type="submit" value="Add!"/>
+        </form>
+    </body>
+</html>

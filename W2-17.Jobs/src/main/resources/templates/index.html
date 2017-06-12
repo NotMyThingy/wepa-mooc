@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Job board</title>
+    </head>
+
+    <body>
+        <h1>Jobs</h1>
+
+        <table>
+            <tr>
+                <th>Job name</th>
+                <th></th>
+            </tr>
+            <tr th:each="job : ${jobs}">
+                <td th:text="${job.name}">Job name</td>
+                <td>
+                    <form th:action="@{~/jobs/{id}(id=${job.id})}" method="POST">
+                        <input type="submit" value="Done!"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Add a job</h2>
+
+        <form action="/" method="POST">
+            <span>Name:</span>
+            <input type="text" name="name"/>
+            <input type="submit" value="Add!"/>
+        </form>
+
+        <h2>Past jobs</h2>
+
+        <table>
+            <tr>
+                <th>Job name</th>
+                <th></th>
+            </tr>
+            <tr th:each="job : ${pastJobs}">
+                <td th:text="${job.name}">Job name</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
