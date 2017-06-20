@@ -1,0 +1,37 @@
+2017-06-12 13:01:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENT" already exists; SQL statement:
+CREATE TABLE Agent (
+    id varchar(9) PRIMARY KEY,
+    name varchar(200)
+) [42101-192]
+2017-06-12 13:01:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+INSERT INTO Agent VALUES('007', 'James') [90002-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.Prepared.query(Prepared.java:212)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:79)
+	at wad.helloinsert.HelloInsert.addNewAgent(HelloInsert.java:45)
+	at wad.helloinsert.HelloInsert.main(HelloInsert.java:27)
+2017-06-12 13:12:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENT" already exists; SQL statement:
+CREATE TABLE Agent (
+    id varchar(9) PRIMARY KEY,
+    name varchar(200)
+) [42101-192]
+2017-06-12 13:13:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENT" already exists; SQL statement:
+CREATE TABLE Agent (
+    id varchar(9) PRIMARY KEY,
+    name varchar(200)
+) [42101-192]
+2017-06-12 13:16:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENT" already exists; SQL statement:
+CREATE TABLE Agent (
+    id varchar(9) PRIMARY KEY,
+    name varchar(200)
+) [42101-192]

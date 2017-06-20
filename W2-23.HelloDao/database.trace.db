@@ -1,0 +1,9 @@
+2017-06-12 15:54:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENTS" not found; SQL statement:
+SELECT * FROM Agents [42102-192]
+2017-06-12 16:20:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENT" already exists; SQL statement:
+CREATE TABLE Agent (
+    id varchar(9) PRIMARY KEY,
+    name varchar(200)
+) [42101-192]

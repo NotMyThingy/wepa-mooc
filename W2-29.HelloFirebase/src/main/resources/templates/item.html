@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title th:text="${item.name}">title</title>
+    </head>
+    <body>
+
+        <header>
+            <h1 th:text="${item.name}">header</h1>
+        </header>
+        
+        <article>
+            <h2>Uusi nimi:</h2>
+            
+            <form method="POST" th:action="@{/item/{itemId}(itemId=${item.identifier})}">
+                <input type="text" name="name" placeholder="nimi"/>
+                <input type="submit" value="Save" />
+            </form>
+        </article>
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Hello Firebase</title>
+    </head>
+
+    <body>
+        <h1>Hello Firebase</h1>
+
+        <ul>
+            <li th:each="item : ${items}"> 
+                <a th:href="@{/item/{itemId}(itemId=${item.identifier})}" th:text="${item.name}">item name</a>
+                <form th:action="@{/delete/{itemId}(itemId=${item.identifier})}" th:method="DELETE">
+                    <input type="submit" value="Delete"/>
+                </form>
+            </li>
+        </ul>
+
+        <h2>Add a new item</h2>
+
+        <form action="/" method="POST">
+            <span>Name:</span>
+            <input type="text" name="name"/>
+            <input type="submit" value="Add!"/>
+        </form>
+        
+    </body>
+</html>
