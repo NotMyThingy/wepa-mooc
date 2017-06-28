@@ -1,0 +1,10 @@
+wad\controller\DefaultController.class
+wad\repository\QuestionRepository.class
+wad\service\QuestionService.class
+wad\controller\QuestionController.class
+wad\domain\Exam.class
+wad\repository\ExamRepository.class
+wad\service\ExamService.class
+wad\ExamsAndQuestionsApplication.class
+wad\domain\Question.class
+wad\controller\ExamController.class
